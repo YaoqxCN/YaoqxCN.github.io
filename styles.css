@@ -1,0 +1,193 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* 防止内容水平滚动 */
+}
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 导航栏样式 */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+    z-index: 10;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5;
+    overflow: hidden;
+}
+nav ul li {
+    float: left;
+    margin: 7px 8px;
+}
+nav ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0 2px 5px black;
+    padding: 8px 19px;
+    text-decoration: none;
+    transition: 0.5s ease;
+    border-radius: 30px; /* 圆角边框 */
+}
+nav ul li a:hover {
+    background:rgba(166, 215, 255, 0.5);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+nav ul li a:active {
+    background:rgba(86, 129, 165, 0.5);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+.nav-text {
+    color: rgb(255, 255, 255);
+    float: right;
+    margin: 7px 8px;
+    margin-right: 25px;
+    text-shadow: 0 2px 5px black;
+    padding: 8px 19px;
+    transition: 0.5s ease;
+    border-radius: 30px;
+}
+.nav-text:hover {
+    background:rgba(166, 215, 255, 0.5);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+.nav-text:active {
+    background:rgba(86, 129, 165, 0.5);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+/* 内容区域样式 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* 根据内容调整，以适应不同屏幕 */
+    height: 100%;
+    z-index: 2; /* 确保内容在背景之上 */
+    padding: 20px; /* 为容器添加内边距 */
+    box-sizing: border-box; /* 边框计算在宽度内 */
+}
+.container h2 {
+    font-size: 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(154, 210, 255, 0.849), rgba(255, 255, 255, 0));
+    margin: 10px 0;
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+header {
+    width: 100%; /* 让header占据整个屏幕 */
+    padding: 20px;
+    box-sizing: border-box; /* 边框计算在宽度内 */
+    position: relative;
+    z-index: 2; /* 确保内容在背景之上 */
+    margin-top: 60px;
+    font-family: 'Ink Free';
+    font-size: 40px;
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+}
+header h1 {
+    text-align: center;
+    margin-top: 26vh;
+}
+header p {
+    border-radius: 12px;
+    margin-top: 30vh;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(199, 199, 199);
+    margin-left: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 60%;
+    transition: 0.5s ease;
+}
+header p:hover {
+    text-shadow: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.267);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.445);
+    backdrop-filter: blur(10px);
+}
+/* 添加内容区域样式 */
+section h2 {
+    font-size: 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(154, 210, 255, 0.849), rgba(255, 255, 255, 0));
+    margin: 10px 0;
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+section p {
+    margin: 100px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.322);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0;
+    margin-left: 15%;
+    width: 70%;
+    box-sizing: border-box;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 25%;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.322);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 10px 0;
+    backdrop-filter: blur(10px);
+    padding-bottom: 20px; /* 为容器添加内边距 */
+}
+.card p {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    backdrop-filter: none;
+    margin: 5px;
+    padding: 1px 12px;
+}
+.tag-container {
+    flex-direction: none;
+    margin-bottom: 10px;
+}
+.tag-container span {
+    background: rgba(166, 215, 255, 0.5);
+    border-radius: 25px;
+    padding: 3px 9px;
+    margin: 3px;
+    transition: 0.5s ease;
+}
+.tag-container span:hover {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+#home {
+    height: 100vh;
+}
