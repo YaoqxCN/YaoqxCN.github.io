@@ -82,6 +82,7 @@ nav ul li a:active {
     z-index: 2; /* 确保内容在背景之上 */
     padding: 20px; /* 为容器添加内边距 */
     box-sizing: border-box; /* 边框计算在宽度内 */
+    margin: 50px 0;
 }
 .container h2 {
     font-size: 20px;
@@ -187,6 +188,31 @@ section p {
 }
 .tag-container span:hover {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+.project-container {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    margin-left: 10%;
+    width: 80%;
+    margin: 10px 0;
+    padding-bottom: 20px; /* 为容器添加内边距 */
+    flex-wrap: wrap;
+}
+.project {
+    width: 280px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.322);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 10px 20px;
+    backdrop-filter: blur(10px);
+    padding-bottom: 20px;
+    transition: 0.5s ease;
+    text-align: center;
+}
+.project:hover {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 #home {
     height: 100vh;
