@@ -5,79 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaoqx | 个人主页</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
     <!-- 背景图片 -->
-    <img src="src/bg.png" alt="背景图片" class="background-image">
-
-    <!-- 导航栏 -->
-    <nav>
-        <ul>
-            <li><a href="javascript:window.location=window.location.pathname;">主页</a></li>
-            <li><a href="#about">简介</a></li>
-            <li><a href="#project">作品</a></li>
-            <li><a href="#contact">联系</a></li>
-            <li class="nav-text">塞尔达，启动！（精神状态良好）</li>
-        </ul>
-    </nav>
-
-    <!-- 网站内容 -->
-    <header id="home">
-        <h1 style="color: rgb(255, 255, 255);">Welcome to Yaoqx's Site</h1>
-        <p>『不要对自己说谎，不要忘记每天看月亮』</p>
-    </header>
-
-    <!-- 简介区域 -->
-    <div id="about">
-        <div class="container">
-            <h2>关于我</h2>
-            <div class="card">
-                <h3>Yaoqx</h3>
-                <div class="tag-container">
-                    <span>NFLSer</span>
-                    <span>初中生</span>
-                    <span>OIer</span>
-                </div>
-                <p>我是一名NFLS的初中生</p>
-                <p>正在学习算法竞赛</p>
-                <p>喜欢自己学学其他内容</p>
-                <p>比如数据处理、网页开发、游戏开发、爬虫等等</p>
-                <p>主要擅长 Python 和 C++</p>
-                <P>在 CSDN 上发过几篇博客</P>
-                <a href="https://blog.csdn.net/2201_75791084"> 点此传送</a>
+    <img src="src/bg.png" alt="背景图片" class="bg">
+    <div class="glass"></div>
+    <div class="left">
+        <img src="src/profile.png" alt="头像" width="170" height="170">
+        <div class="tag-container">
+            <span>NFLS</span>
+            <span>初中生</span>
+        </div>
+        <img src="src/chart.png" alt="雷达图" height="280">
+        <div class="friends">
+            <h4><i class="fa fa-link"></i> 友情链接</h4>
+            <a href="https://blog.black-hole.asia/">Maozy</a>
+        </div>
+        <p>© 2024 Yaoqx.</p>
+    </div>
+    <div class="right">
+        <div class="wrapper">
+            <span>H</span><span>i</span><span>,</span>
+            <span>I</span><span>'</span><span>m</span>
+            <span>Y</span><span>a</span><span>o</span><span>q</span><span>x</span><span>.</span>
+        </div>
+        <p>不要对自己说谎，不要忘记每天看月亮</p>
+        <div class="contact">
+            <div class="icon">
+                <a href="https://github.com/YaoqxCN"><i class="fa fa-github"></i> Github</a>
+            </div>
+            <div class="icon">
+                <a href="https://blog.csdn.net/2201_75791084"><i class="fa fa-bookmark"></i> CSDN</a>
+            </div>
+            <div class="icon">
+                <a href="mailto:1064245198@qq.com"><i class="fa fa-paper-plane"></i> Email</a>
             </div>
         </div>
-    </div>
-
-    <!-- 作品区域 -->
-    <div id="project">
-        <div class="container">
-            <h2>我的作品</h2>
-            <div class="project-container">
-                <div class="project">
-                    <h3>闪电心算</h3>
-                    <img src="src/super_brain.png" title="闪电心算" height="150px">
-                    <p>复刻最强大脑挑战项目：闪电心算</p>
-                </div>
-                <div class="project">
-                    <h3>桌面倒计日</h3>
-                    <img src="src/desktop_countdown.png" title="桌面倒计日" height="150px">
-                    <p>用来提醒你一个日子还有多久的程序</p>
-                </div>
-                <div class="project">
-                    <h3>Visual PIP</h3>
-                    <p>正在开发……</p>
-                </div>
-            </div>
+        <div class="project">
+            <h2><i class="fa fa-code"></i> 我的作品</h2>
+        </div>
+        <div class="about">
+            <h2><i class="fa fa-pencil-square-o"></i> 我的博客</h2>
         </div>
     </div>
-
-    <!-- 联系方式区域 -->
-    <section id="contact">
-        <div class="container">
-            <h2>联系我</h2>
-            <p>这里是我的联系方式。</p>
-        </div>
-    </section>
+    </div>
 </body>
 </html>
