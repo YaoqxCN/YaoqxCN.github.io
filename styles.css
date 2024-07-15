@@ -1,219 +1,191 @@
 body, html {
+    user-select: none;
     margin: 0;
     padding: 0;
     height: 100%;
     overflow-x: hidden; /* 防止内容水平滚动 */
 }
-.background-image {
+a {
+    text-decoration: none;
+}
+.fab.fa-github {
+    font-size: 24px; /* 调整图标大小 */
+    color: #333; /* 调整图标颜色 */
+}
+.bg {
     position: fixed;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: -10;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-/* 导航栏样式 */
-nav {
-    position: fixed;
-    top: 0;
+.glass {
+    position: absolute;
+    z-index: -1;
     width: 100%;
-    background: rgba(255, 255, 255, 0);
-    z-index: 10;
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 5;
-    overflow: hidden;
-}
-nav ul li {
-    float: left;
-    margin: 7px 8px;
-}
-nav ul li a {
-    display: block;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-shadow: 0 2px 5px black;
-    padding: 8px 19px;
-    text-decoration: none;
-    transition: 0.5s ease;
-    border-radius: 30px; /* 圆角边框 */
-}
-nav ul li a:hover {
-    background:rgba(166, 215, 255, 0.5);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-}
-nav ul li a:active {
-    background:rgba(86, 129, 165, 0.5);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-}
-.nav-text {
-    color: rgb(255, 255, 255);
-    float: right;
-    margin: 7px 8px;
-    margin-right: 25px;
-    text-shadow: 0 2px 5px black;
-    padding: 8px 19px;
-    transition: 0.5s ease;
-    border-radius: 30px;
-}
-.nav-text:hover {
-    background:rgba(166, 215, 255, 0.5);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-}
-.nav-text:active {
-    background:rgba(86, 129, 165, 0.5);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-}
-/* 内容区域样式 */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* 根据内容调整，以适应不同屏幕 */
     height: 100%;
-    z-index: 2; /* 确保内容在背景之上 */
-    padding: 20px; /* 为容器添加内边距 */
-    box-sizing: border-box; /* 边框计算在宽度内 */
-    margin: 50px 0;
+    background-color: rgba(255, 255, 255. 0);
+    backdrop-filter: blur(25px);
 }
-.container h2 {
-    font-size: 20px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(154, 210, 255, 0.849), rgba(255, 255, 255, 0));
-    margin: 10px 0;
-    text-align: center;
-    padding-left: 60px;
-    padding-right: 60px;
+.left {
+    z-index: 5;
+    margin-left: 10%;
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-header {
-    width: 100%; /* 让header占据整个屏幕 */
-    padding: 20px;
-    box-sizing: border-box; /* 边框计算在宽度内 */
-    position: relative;
-    z-index: 2; /* 确保内容在背景之上 */
+.left img {
     margin-top: 60px;
-    font-family: 'Ink Free';
-    font-size: 40px;
-    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
 }
-header h1 {
-    text-align: center;
-    margin-top: 26vh;
+.right {
+    z-index: 5;
+    position: absolute;
+    margin-left: 35%;
+    width: 65%;
+    height: 100%;
 }
-header p {
-    border-radius: 12px;
-    margin-top: 30vh;
-    text-align: center;
-    font-size: 20px;
-    color: rgb(199, 199, 199);
-    margin-left: 20%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 60%;
-    transition: 0.5s ease;
-}
-header p:hover {
-    text-shadow: none;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.267);
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.445);
-    backdrop-filter: blur(10px);
-}
-/* 添加内容区域样式 */
-section h2 {
-    font-size: 20px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(154, 210, 255, 0.849), rgba(255, 255, 255, 0));
-    margin: 10px 0;
-    text-align: center;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-section p {
-    margin: 100px 0;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.322);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 60px 0;
-    margin-left: 15%;
-    width: 70%;
-    box-sizing: border-box;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    margin: 10px 0;
-    text-align: center;
-    backdrop-filter: blur(10px);
-}
-.card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 25%;
-    width: 50%;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.322);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin: 10px 0;
-    backdrop-filter: blur(10px);
-    padding-bottom: 20px; /* 为容器添加内边距 */
-}
-.card p {
-    background: rgba(255, 255, 255, 0);
-    box-shadow: none;
-    backdrop-filter: none;
-    margin: 5px;
-    padding: 1px 12px;
+.right p {
+    color: rgb(184, 184, 184);
+    font-size: 1.4em;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 .tag-container {
-    flex-direction: none;
-    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: -20px;
 }
 .tag-container span {
-    background: rgba(166, 215, 255, 0.5);
-    border-radius: 25px;
-    padding: 3px 9px;
-    margin: 3px;
+    font-size: 1.1em;
+    color: rgb(214, 214, 214);
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
     transition: 0.5s ease;
 }
 .tag-container span:hover {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
-.project-container {
-    display: flex;
-    align-items: left;
-    justify-content: center;
-    margin-left: 10%;
-    width: 80%;
-    margin: 10px 0;
-    padding-bottom: 20px; /* 为容器添加内边距 */
-    flex-wrap: wrap;
+.friends {
+    text-align: center;
+    color: rgb(214, 214, 214);
+    margin-top: 10px;
 }
-.project {
-    width: 280px;
+.friends a {
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.322);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin: 10px 20px;
-    backdrop-filter: blur(10px);
-    padding-bottom: 20px;
+    outline: 0;
+    color: rgb(214, 214, 214);
+    font-size: 1em;
+    transition: 0.25s ease;
+    border-bottom: 1px solid transparent;
+}
+.friends a:hover {
+    border-bottom: 1px solid #d9aaff;
+}
+.left p {
+    color: rgb(214, 214, 214);
+    margin-top: 70px;
+}
+.contact {
+    margin-left: 30px;
+    display: flex;
+    margin-top: 40px;
+}
+.icon {
+    margin-right: 20px;
+}
+.icon a{
+    font-size: 1.2em;
+    padding: 5px 10px;
+    color: rgb(214, 214, 214);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
     transition: 0.5s ease;
     text-align: center;
 }
-.project:hover {
-    background-color: rgba(255, 255, 255, 0.7);
+.icon a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
-#home {
-    height: 100vh;
+.project {
+    margin-top: 60px;
+    margin-left: 30px;
+}
+.project h2 {
+    color: rgb(214, 214, 214);
+}
+.about {
+    margin-top: 60px;
+    margin-left: 30px;
+}
+.about h2 {
+    color: rgb(214, 214, 214);
+}
+
+
+/* 标题动效 */
+.wrapper{
+    margin-top: 60px;
+    margin-left: 30px;
+}
+.wrapper span{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    animation: lighting 1000ms alternate infinite ease;
+}
+@keyframes lighting{
+    0%,85%{
+        color: #ffffff;
+        text-shadow: none;
+    }
+    100%{
+        color:#d9aaff;
+        text-shadow: 0 0 10px #8c00ff, 0 0 3px #441aff;
+    }
+}
+.wrapper span:nth-child(1){
+    animation-delay: 150ms;
+}
+.wrapper span:nth-child(2){
+    animation-delay: 300ms;
+}
+.wrapper span:nth-child(3){
+    animation-delay: 450ms;
+}
+.wrapper span:nth-child(4){
+    animation-delay: 600ms;
+    margin-left: 10px;
+}
+.wrapper span:nth-child(5){
+    animation-delay: 750ms;
+}
+.wrapper span:nth-child(6){
+    animation-delay: 900ms;
+}
+.wrapper span:nth-child(7){
+    animation-delay: 1050ms;
+    margin-left: 10px;
+}
+.wrapper span:nth-child(8){
+    animation-delay: 1200ms;
+}
+.wrapper span:nth-child(9){
+    animation-delay: 1350ms;
+}
+.wrapper span:nth-child(10){
+    animation-delay: 1500ms;
+}
+.wrapper span:nth-child(11){
+    animation-delay: 1650ms;
 }
